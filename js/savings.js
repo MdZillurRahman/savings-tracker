@@ -4,21 +4,25 @@ function collection(input){
     return finalInput;
 }
 
-function totalExpense(rent, food, other){
-    
+function totalExpense(){
+    const rent = collection('rent');
+    const food = collection('food');
+    const other = collection('other');
     const totalExpense = rent + food + other;
     document.getElementById('totalExpense').innerText = totalExpense;
     return totalExpense;
        
 }
 
-function balance(income){
+function balance(){
+    const income = collection('income');
     const balanceAmount = income - totalExpense();
     document.getElementById('balance').innerText = balanceAmount;
     return balanceAmount; 
 }
 
 function savings(){
+    const income = collection('income');
     const input = collection('save');
     const save = income * input / 100;
     document.getElementById('savingAmount').innerText = save;
@@ -41,14 +45,12 @@ function remainingBalance(){
 }); */
 
 document.getElementById('calculateBtn').addEventListener('click', function(){
-    const rent = collection('rent');
-    const food = collection('food');
-    const other = collection('other');
-    const income = collection('income');
+    
+   
 
     
-    totalExpense(rent, food, other);
-    balance(income);
+    totalExpense();
+    balance();
     
 })
 

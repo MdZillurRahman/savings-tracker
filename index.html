@@ -4,55 +4,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Savings</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/b0cbbac226.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+
+     <!-- bootstrap stylesheet -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 </head>
 <body>
     <!-- header -->
     <header>
-        <h1 class="text-4xl text-center font-bold mt-5 mb-10">Savings Tracker</h1>
-        <h3 class="text-3xl text-center pt-5 pb-16">Welcome To <span class="text-red-300">Your Savings</span>!!!</h1>
+        <h1 class="text-center"> Savings Tracker</h1>
     </header>
 
-    <!-- main -->
-    <main>
-        <section class="grid grid-cols-2 gap-4">
-            <!-- images section  -->
-            <div>
-                <img class="pl-16" src="images/savings.jpg" alt="">
-            </div>
-
-            <!-- calculation section  -->
-            <div class="bg-gray-100 w-3/4">
-                <!-- Income  -->
-                <h2 class="text-2xl text-center font-bold  pb-2">Income</h2>
-                <h4 class="text-center text-xl font-medium">Income: <input  id="incomeInput" type="text" name="" placeholder="Enter Your Income" class="bg-gray-200 p-2 rounded text-black"></h4>
-
-                <!-- Expenses -->
-                <h2 class="text-2xl text-center font-bold  pb-2">Expenses</h2>
-                <h4 class="text-center text-xl pb-4 font-medium pl-8">Rent: <input  id="rentInput" type="text" name="" placeholder="Enter Your Rent" class="bg-gray-200 p-2 rounded text-black"></h4>
-                <h4 class="text-center text-xl pb-4 font-medium pl-6">Food: <input  id="foodInput" type="text" name="" placeholder="Enter Your Food Cost" class="bg-gray-200 p-2 rounded text-black"></h4>
-                <h4 class="text-center text-xl pb-4 font-medium pl-2">Others: <input  id="otherInput" type="text" name="" placeholder="Enter Your Other Cost" class="bg-gray-200 p-2 rounded text-black"></h4>
-
-                <!-- Calculate Button  -->
-                <div class="text-center">
-                    <button id="calculateBtn" class="py-2 px-6 bg-blue-400 text-white rounded justify-items-center font-semibold">Calculate</button>
+    <!-- main --> <main> 
+        <section class="container mt-5">
+            <div class="row p-5 bg-gradient d-flex align-items-center  g-4">
+                
+                <!-- image -->
+                <div class="col-sm-12 col-lg-6">
+                    <img src="images/savings.jpg" class="d-block w-100" alt="...">
                 </div>
 
-                <h4 class="text-center text-xl pb-4 font-medium pt-8">Total Expenses :<span id ="totalExpense"> 0000 </span> taka</h4>
-                <h4 class="text-center text-xl pb-4 font-medium">Balance :<span id="balance"> 0000 </span> taka</h4>
+                <!--  form -->
+              <div class="col-sm-12 col-lg-6">
+            
+                <div>
+                    <h1 class="text-center" >Income</h1>
+                    <div class="row mb-4">
+                      <label  class="col-sm-2">Income</label>
+                      <div class="col-sm-10">
+                        <input type="text" id="incomeInput" placeholder="Enter Your Income">
+                      </div>
+                    </div>
+                    <h1 class="text-center">Expenses</h1>
+                    <div class="row mb-2">
+                      <label class="col-sm-2">Rent</label>
+                      <div class="col-sm-10">
+                        <input type="text" id="rentInput" placeholder="Email">
+                      </div>
+                    </div>
+                    <div class="row mb-2">
+                      <label class="col-sm-2">Food</label>
+                      <div class="col-sm-10">
+                        <input type="text" id="foodInput" placeholder="Email">
+                      </div>
+                    </div>
+                    <div class="row mb-2">
+                      <label class="col-sm-2">Other</label>
+                      <div class="col-sm-10">
+                        <input type="text" id="otherInput" placeholder="Email">
+                      </div>
+                    </div>
+                   
+                   
+                    <div class="row mt-3 mb-5">
+                      <div class="col-sm-10 ">
+                        <button id="calculateBtn" class="btn btn-primary">Calculate</button>
+                      </div>
+                    </div>
+
+                    <h4 class="text-center">Total Expenses :<span id="totalExpense"> 0000 </span> taka </h4>
+                <h4 class="text-center">Balance :<span id="balance"> 0000 </span> taka </h4>
 
                 <!-- savings -->
-                <h4 class="text-center text-xl pb-4 font-medium">Save: <input  id="saveInput" type="text" name="" class="bg-gray-200 rounded w-2/12 text-black text-center"> % <button id="savingBtn" class="px-12 py-1 bg-blue-400 text-white rounded font-semibold">Save</button></h4>
+                <h4 class="text-center">Save: <input  id="saveInput" type="text" name="" class=""> % <button id="savingBtn" class="btn btn-primary">Save</button></h4>
 
-                <h4 class="text-center text-xl pb-4 font-medium pt-8">Saving Amount :<span id="savingAmount"> 0000 </span> taka</h4>
-                <h4 class="text-center text-xl pb-4 font-medium">Remaining Balance :<span id="remaningBalance"> 0000 </span> taka</h4>
+                <h4 class="text-center">Saving Amount :<span id="savingAmount"> 0000 </span> taka </h4>
+                <h4 class="text-center">Remaining Balance :<span id="remaningBalance"> 0000 </span> taka </h4>
+                </div>
+                  
+                  
+              </div>
+             
+          </div>
+          </section>
+</main>
 
-            </div>
-        </section>
-    </main>
-    <script src="js/savings.js"></script>
+    
+
+      <!-- bootstrap Script -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+
+      <script src="js/savings.js"></script>
 </body>
 </html>
