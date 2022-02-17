@@ -43,6 +43,7 @@ function balance(){
 function savings(){
     const income = collection('income');
     const input = collection('save');
+    
     const save = income * input / 100;
     document.getElementById('savingAmount').innerText = save;
     return save;
@@ -52,9 +53,14 @@ function remainingBalance(){
     const balanceFinal = balance();
     const save = savings();
 
-    const remain = balanceFinal - save;
+    const error3 = document.getElementById('error3');
+    if(balance() < savings()){
+        error3.style.display = 'block';
+    }
+    else{
+        const remain = balanceFinal - save;
     document.getElementById('remaningBalance').innerText = remain;
-    console.log(remain);
+    }
 }
 
 /* document.getElementById('key-pad').addEventListener('click', function (event) {
@@ -64,10 +70,6 @@ function remainingBalance(){
 }); */
 
 document.getElementById('calculateBtn').addEventListener('click', function(){
-    const rent = collection('rent');
-    const food = collection('food');
-    const other = collection('other');
-    const income = collection('income');
 
     totalExpense();
     balance(); 
