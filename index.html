@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Savings</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/b0cbbac226.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- header -->
     <header>
-        <h1 class="text-4xl text-center pt-5 pb-16">Welcome To <span class="text-red-300">Your Savings</span>!!!</h1>
+        <h1 class="text-4xl text-center font-bold mt-5 mb-10">Savings Tracker</h1>
+        <h3 class="text-3xl text-center pt-5 pb-16">Welcome To <span class="text-red-300">Your Savings</span>!!!</h1>
     </header>
 
     <!-- main -->
@@ -19,13 +21,40 @@
         <section class="grid grid-cols-2 gap-4">
             <!-- images section  -->
             <div>
-                <img class="w-3/4 ps-6" src="images/savings.jpg" alt="">
+                <img class="pl-16" src="images/savings.jpg" alt="">
             </div>
-            <div class="bg-gray-300 w-3/4">
-                <h2 class="text-2xl text-center font-bold">Income</h2>
+
+            <!-- calculation section  -->
+            <div class="bg-gray-100 w-3/4">
+                <!-- Income  -->
+                <h2 class="text-2xl text-center font-bold  pb-2">Income</h2>
+                <h4 class="text-center text-xl font-medium">Income: <input  id="incomeInput" type="text" name="" placeholder="Enter Your Income" class="bg-gray-200 p-2 rounded text-black"></h4>
+
+                <!-- Expenses -->
+                <h2 class="text-2xl text-center font-bold  pb-2">Expenses</h2>
+                <h4 class="text-center text-xl pb-4 font-medium pl-8">Rent: <input  id="rentInput" type="text" name="" placeholder="Enter Your Rent" class="bg-gray-200 p-2 rounded text-black"></h4>
+                <h4 class="text-center text-xl pb-4 font-medium pl-6">Food: <input  id="foodInput" type="text" name="" placeholder="Enter Your Food Cost" class="bg-gray-200 p-2 rounded text-black"></h4>
+                <h4 class="text-center text-xl pb-4 font-medium pl-2">Others: <input  id="otherInput" type="text" name="" placeholder="Enter Your Other Cost" class="bg-gray-200 p-2 rounded text-black"></h4>
+
+                <!-- Calculate Button  -->
+                <div class="text-center">
+                    <button id="calculateBtn" class="py-2 px-6 bg-blue-400 text-white rounded justify-items-center font-semibold">Calculate</button>
+                    <p>❌Please Enter Valid Number</p>
+                    <p></p>
+                </div>
+
+                <h4 class="text-center text-xl pb-4 font-medium pt-8">Total Expenses :<span id ="totalExpense"> 0000 </span> taka</h4>
+                <h4 class="text-center text-xl pb-4 font-medium">Balance :<span id="balance"> 0000 </span> taka</h4>
+
+                <!-- savings -->
+                <h4 class="text-center text-xl pb-4 font-medium">Save: <input  id="saveInput" type="text" name="" class="bg-gray-200 rounded w-2/12 text-black text-center"> % <button id="savingBtn" class="px-12 py-1 bg-blue-400 text-white rounded font-semibold">Save</button></h4>
+
+                <h4 class="text-center text-xl pb-4 font-medium pt-8">Saving Amount :<span id="savingAmount"> 0000 </span> taka</h4>
+                <h4 class="text-center text-xl pb-4 font-medium">Remaining Balance :<span id="remaningBalance"> 0000 </span> taka</h4>
 
             </div>
         </section>
     </main>
+    <script src="js/savings.js"></script>
 </body>
 </html>
