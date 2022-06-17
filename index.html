@@ -1,99 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
-     <!-- bootstrap stylesheet -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-</head>
-<body>
+    <!-- bootstrap stylesheet -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
     <!-- header -->
-    <header>
-        <h1 class="text-center"> Savings Tracker</h1>
-        <h3 class="text-center">Welcome to Your Savings Tracker</h3>
+    <header class="header">
+      <h1 class="text-center">Savings Tracker</h1>
+      <h3 class="text-center">Welcome to Your Savings Tracker</h3>
     </header>
 
-    <!-- main --> <main> 
-        <section class="container mt-5">
-            <div class="row p-5 bg-gradient d-flex align-items-center  g-4">
-                
-                <!-- image -->
-                <div class="col-sm-12 col-lg-6">
-                    <img src="images/savings.jpg" class="d-block w-100" alt="...">
-                </div>
-
-                <!--  form -->
-              <div class="col-sm-12 col-lg-6">
-            
-                <div>
-                    <h1 class="text-center" >Income</h1>
-                    <div class="row mb-4">
-                      <label  class="col-sm-2">Income</label>
-                      <div class="col-sm-10">
-                        <input type="number" id="incomeInput" placeholder="Enter Your Income">
-                      </div>
-                    </div>
-                    <h1 class="text-center">Expenses</h1>
-                    <div class="row mb-2">
-                      <label class="col-sm-2">Rent</label>
-                      <div class="col-sm-10">
-                        <input type="number" id="rentInput" placeholder="Email">
-                      </div>
-                    </div>
-                    <div class="row mb-2">
-                      <label class="col-sm-2">Food</label>
-                      <div class="col-sm-10">
-                        <input type="number" id="foodInput" placeholder="Email">
-                      </div>
-                    </div>
-                    <div class="row mb-2">
-                      <label class="col-sm-2">Other</label>
-                      <div class="col-sm-10">
-                        <input type="number" id="otherInput" placeholder="Email">
-                      </div>
-                    </div>
-                   
-                   
-                    <div class="row mt-3 mb-5">
-                      <div class="col-sm-10 ">
-                        <button id="calculateBtn" class="btn btn-primary mb-2">Calculate</button>
-                      </div>
-                      <p id="error1" class="error">❌ Please Enter A Valid Number</p>
-                      <p id="error2" class="error">Opps! You Run Out Of Credit.</p>
-
-                    </div>
-
-                    <h4 class="text-center">Total Expenses :<span id="totalExpense"> 0000 </span> taka </h4>
-                <h4 class="text-center">Balance :<span id="balance"> 0000 </span> taka </h4>
-
-                <!-- savings -->
-                <h4 class="text-center">Save: <input  id="saveInput" type="text" name="" class="text-center "> % <button id="savingBtn" class="btn btn-primary">Save</button></h4>
-                <p id="error3" class="error">You do not have enough money.</p>
-
-                <h4 class="text-center">Saving Amount :<span id="savingAmount"> 0000 </span> taka </h4>
-                <h4 class="text-center">Remaining Balance :<span id="remaningBalance"> 0000 </span> taka </h4>
-                </div>
-                  
-                  
-              </div>
-             
+    <!-- main -->
+    <main>
+      <section class="container mt-5">
+        <div class="row p-5 bg-gradient d-flex align-items-center g-4">
+          <!-- image -->
+          <div class="col-sm-12 col-lg-6">
+            <img src="images/savings.jpg" class="d-block w-100" alt="..." />
           </div>
-          </section>
-</main>
 
-    
+          <!--  form -->
+          <div class="col-sm-12 col-lg-6">
+            <div>
+              <h1 class="text-center">Income</h1>
+              <div class="row mb-4 ms-5">
+                <label class="col-sm-2">Income</label>
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    id="incomeInput"
+                    placeholder="Enter Your Income"
+                  />
+                </div>
+              </div>
+              <h1 class="text-center">Expenses</h1>
+              <div class="row mb-2 ms-5">
+                <label class="col-sm-2">Rent</label>
+                <div class="col-sm-10">
+                  <input type="text" id="rentInput" placeholder="Rent" />
+                </div>
+              </div>
+              <div class="row mb-2 ms-5">
+                <label class="col-sm-2">Food</label>
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    id="foodInput"
+                    placeholder="Food Expense"
+                  />
+                </div>
+              </div>
+              <div class="row mb-2 ms-5">
+                <label class="col-sm-2">Other</label>
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    id="otherInput"
+                    placeholder="Other Expenses"
+                  />
+                </div>
+              </div>
 
-      <!-- bootstrap Script -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+              <div class="mt-4 mb-5 d-flex justify-content-center">
+                <div class="col-sm-10">
+                  <button id="calculateBtn" class="btn btn-primary mb-2">
+                    Calculate
+                  </button>
+                </div>
+                <p id="error1" class="error">❌ Please Enter A Valid Number</p>
+                <p id="error2" class="error">Opps! You Run Out Of Credit.</p>
+              </div>
+
+              <h4 class="text-center">
+                Total Expenses :<span id="totalExpense"> 0000 </span> taka
+              </h4>
+              <h4 class="text-center">
+                Balance :<span id="balance"> 0000 </span> taka
+              </h4>
+
+              <!-- savings -->
+              <h4 class="text-center">
+                Save:
+                <input id="saveInput" type="text" name="" class="text-center mb-3" />
+                % <button id="savingBtn" class="btn btn-primary ms-3">Save</button>
+              </h4>
+              <p id="error3" class="error">You do not have enough money.</p>
+
+              <h4 class="text-center">
+                Saving Amount :<span id="savingAmount"> 0000 </span> taka
+              </h4>
+              <h4 class="text-center">
+                Remaining Balance :<span id="remaningBalance"> 0000 </span> taka
+              </h4>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- bootstrap Script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
 
-      <script src="js/savings.js"></script>
-</body>
+    <script src="js/savings.js"></script>
+  </body>
 </html>

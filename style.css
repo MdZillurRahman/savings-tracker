@@ -1,5 +1,13 @@
+.header{
+    margin-top: 20px;
+}
+
 .error{
     display: none;
     background-color: burlywood;
     text-align: center;
+}
+
+#calculateBtn{
+    margin-left: 10vw;
 }
